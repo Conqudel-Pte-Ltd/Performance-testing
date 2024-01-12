@@ -1,0 +1,21 @@
+name: JMeter Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  jmeter-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run JMeter test
+      uses: QAInsights/PerfAction@v5.6.2
+      with:
+        test-plan-path: './Register.jmx'
+        results-file: 'result.jtl'
+        
