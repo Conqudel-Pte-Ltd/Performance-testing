@@ -12,13 +12,10 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-      # Explicitly set Node.js version to 16
-      with:
-        node-version: 16
 
     - name: Run JMeter test
       uses: QAInsights/PerfAction@v5.6.2
       with:
         test-plan-path: 'path/to/your/test-plan.jmx'
         results-file: 'result.jtl'
-        args: '--your-optional-arguments'
+        
