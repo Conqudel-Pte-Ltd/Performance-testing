@@ -18,3 +18,9 @@ jobs:
       with:
         test-plan-path: './Register.jmx'
         results-file: 'result.jtl'
+
+    - name: Upload JMeter results artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: jmeter-results
+        path: result.jtl
