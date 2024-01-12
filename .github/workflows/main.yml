@@ -16,6 +16,6 @@ jobs:
     - name: Run JMeter test
       uses: QAInsights/PerfAction@v5.6.2
       with:
-        test-plan-path: 'path/to/your/test-plan.jmx'
+        test-plan-path: './Register.jmx'
         results-file: 'result.jtl'
         
