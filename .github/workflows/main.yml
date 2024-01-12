@@ -18,4 +18,10 @@ jobs:
       with:
         test-plan-path: './Register.jmx'
         results-file: 'result.jtl'
+    - name: Upload Results
+      uses: actions/upload-artifact@v3
+      with:
+        name: jmeter-results
+        path: result.jtl
+        if-no-files-found: erro
         
